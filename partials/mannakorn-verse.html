@@ -20,50 +20,11 @@
 	
 	<footer>
 		<div class="left">
-			<button class="btn" ng-tap="randomVerse()">{{resource.refreshButton_Text}}</button>
+			<button class="btn" ng-click="randomVerse()">{{resource.refreshButton_Text}}</button>
 		</div>
 		<div class="right">
 			<a href="{{changeLanguageLink}}">{{resource.changeLanguageButton_Text}}</a>
 		</div>
 	</footer>
 
-	<!-- <div class="navbar navbar-inverse navbar-static-top">
-		<div class="navbar-inner">
-			<a class="brand" href="#">Mannakorn</a>
-			<form class="navbar-form pull-right">
-				<button class="btn btn-primary" ng-tap="randomVerse()">
-					<i class="icon-refresh"></i> {{resource.refreshButton_Text}}
-				</button>
-			</form>
-		</div>
-	</div>
-    <div class="content">
-    	<div id="mannakorn-holder">
-        	<div id="mannakorn">
-        		<div class="content" ng-repeat="verse in mannakorn.verses">
-        			<span class="item"><span class="number">{{verse.number}}</span> {{verse.text}}</span>
-    			</div>
-        		<div class="verse">{{mannakorn.description}}</div>
-        	</div>
-    	</div>
-    	<select ng-model="language" ng-change="changeLanguage()">
-    		<option value="en">english</option>
-    		<option value="de">deutsch</option>
-    		<option value="no">norsk</option>
-    		<option value="nl">nederlands</option>s
-    	</select>
-    	<p>{{language}}</p>
-    	<div id="language-chooser">
-    		<a class="btn" href="{{changeLanguageLink}}">
-    			<i class="icon-flag icon-flag-{{resource.changeLanguageButton_Code}}"></i> {{resource.changeLanguageButton_Text}}
-			</a>
-    	</div>
-    </div> -->
 </div>
-<script>
-$(function() {
-	var $selects = $('select');			
-	$selects.easyDropDown({
-	});
-});
-</script>
