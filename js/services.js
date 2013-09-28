@@ -8,11 +8,9 @@ angular.module('mannakornServices', ['ngResource'])
 	})
 	.factory('ResourceLoader', ['$q', '$http', '$timeout', function($q, $http, $timeout) {
 		return function(language) {
-			console.timeStamp('start loading resources');
 			var delay = $q.defer();
 			$http.get('resources/resource-'+language+'.json', { cache: true })
 				.success(function(data) {
-					console.timeStamp('done loading resources');
 					delay.resolve(data);
 				});
 			return delay.promise;
@@ -20,11 +18,9 @@ angular.module('mannakornServices', ['ngResource'])
 	}])
 	.factory('BookNamesLoader', ['$q', '$http', function($q, $http) {
 		return function() {
-			console.timeStamp('start loading booknames');
 			var delay = $q.defer();
 			$http.get('bible/book_names.txt', { cache: true })
 				.success(function(data) {
-					console.timeStamp('done loading bookNames');
 					delay.resolve(data);
 				});
 			return delay.promise;
@@ -106,7 +102,6 @@ angular.module('mannakornServices', ['ngResource'])
 	}])
 	.factory('ResourceBibleLoader', ['$q', '$http', function($q, $http) {
 		return function(language) {
-			console.timeStamp('start loading bible '+language)
 			var bible;
 				if(language == 'de')
 					bible = 'german_luther_1912_utf8.json';
@@ -121,7 +116,6 @@ angular.module('mannakornServices', ['ngResource'])
 			
 			$http.get('bible/'+bible, { cache: true })
 				.success(function(data) {
-					console.timeStamp('done loading bible');
 					delay.resolve(data);
 				});
 			return delay.promise;

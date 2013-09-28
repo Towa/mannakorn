@@ -6,18 +6,15 @@ angular.module('mannakorn')
 			transclude: true,
 			link: function(scope, element, attrs) {
 				element.parent().click(function() {
-					console.timeStamp('click triggered');
 					element.addClass('loading');
 				});
 				if($rootScope.loadingEventRegistered)
 					return;
 				
 				$rootScope.$on('$routeChangeStart', function() {
-					console.timeStamp('start loading');
 					element.addClass('loading');
 				});
 				$rootScope.$on('$routeChangeSuccess', function() {
-					console.timeStamp('done loading');
 					element.removeClass('loading');
 				});
 				$rootScope.loadingEventRegistered = true;
