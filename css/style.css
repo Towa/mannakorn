@@ -35,6 +35,7 @@ body {
 	font-family: "Open Sans", Times New Roman, sans-serif;
 	background: #f7f7f7;
 	font-size: 85%;
+	-webkit-overflow-scrolling: none;
 }
 
 .page {
@@ -67,6 +68,7 @@ body {
 	width: 100%;
 	max-height: 100%;
 	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .page .body .mannakorn-holder {

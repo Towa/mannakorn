@@ -27,7 +27,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
     },
     // deviceready Event Handler
     //
