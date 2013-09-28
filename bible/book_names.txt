@@ -1,0 +1,86 @@
+﻿01O	Genesis	1. Mose
+02O	Exodus	2. Mose
+03O	Leviticus	3. Mose
+04O	Numbers	4. Mose
+05O	Deuteronomy	5. Mose
+06O	Joshua	Josua
+07O	Judges	Richter
+08O	Ruth	Rut
+09O	1 Samuel	1. Samuel
+10O	2 Samuel	2. Samuel
+11O	1 Kings	1. Könige
+12O	2 Kings	2. Könige
+13O	1 Chronicles	1. Chronik
+14O	2 Chronicles	2. Chronik
+15O	Ezra	Esra
+16O	Nehemiah	Nehemia
+17O	Esther	Ester
+18O	Job	Hiob
+19O	Psalms	Psalm
+20O	Proverbs	Sprüche
+21O	Ecclesiastes	Prediger
+22O	Song of Solomon	Hohelied
+23O	Isaiah	Jesaja
+24O	Jeremiah	Jeremia
+25O	Lamentations	Klagelieder
+26O	Ezekiel	Hesekiel
+27O	Daniel	Daniel
+28O	Hosea	Hosea
+29O	Joel	Joel
+30O	Amos	Amos
+31O	Obadiah	Obadja
+32O	Jonah	Jona
+33O	Micah	Micha
+34O	Nahum	Nahum
+35O	Habakkuk	Habakuk
+36O	Zephaniah	Zephania
+37O	Haggai	Haggai
+38O	Zechariah	Sacharja
+39O	Malachi	Maleachi
+40N	Matthew	Matthäus
+41N	Mark	Markus
+42N	Luke	Lukas
+43N	John	Johannes
+44N	Acts of the Apostles	Apostelgeschichte
+45N	Romans	Römer
+46N	1 Corinthians	1. Korinther
+47N	2 Corinthians	2. Korinther
+48N	Galatians	Galater
+49N	Ephesians	Epheser
+50N	Philippians	Philipper
+51N	Colossians	Kolosser
+52N	1 Thessalonians	1. Thessaloniker
+53N	2 Thessalonians	2. Thessaloniker
+54N	1 Timothy	1. Timotheus
+55N	2 Timothy	2. Timotheus
+56N	Titus	Titus
+57N	Philemon	Philemon
+58N	Hebrews	Hebräer
+59N	James	Jakobus
+60N	1 Peter	1. Petrus
+61N	2 Peter	2. Petrus
+62N	1 John	1. Johannes
+63N	2 John	2. Johannes
+64N	3 John	3. Johannes
+65N	Jude	Judas
+66N	Revelation	Offenbarung
+67A	Tobit
+68A	Judith
+69A	Esther, Greek
+70A	Wisdom of Solomon
+71A	Ecclesiasticus (Sira
+72A	Baruch
+73A	Epistle of Jeremiah
+74A	Prayer of Azariah
+75A	Susanna
+76A	Bel and the Dragon
+77A	1 Maccabees
+78A	2 Maccabees
+79A	3 Maccabees
+80A	4 Maccabees
+81A	1 Esdras
+82A	2 Esdras
+83A	Prayer of Manasseh
+84A	Psalm 151
+85A	Psalm of Solomon
+86A	Odes
