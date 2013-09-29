@@ -49,14 +49,9 @@ body {
 	background-position: top center;
 }
 
-.page header {
-	width: 100%;
-	min-height: 150px;
-}
-
 .page .body {
 	position: absolute;
-	bottom: 100px;
+	bottom: 94px;
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -74,6 +69,7 @@ body {
 .page .body .mannakorn-holder {
 	margin-top: 150px;
 	background: #f7f7f7;
+	margin-bottom: 1px;
 }
 
 .page footer {
