@@ -36,6 +36,7 @@ body {
 	background: #f7f7f7;
 	font-size: 85%;
 	-webkit-overflow-scrolling: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .page {
@@ -92,6 +93,7 @@ h4 {
 	font-size: 108%;
 }
 
+a.button,
 button {
 	background: #ffb700;
 	border-radius: 8px;
@@ -103,18 +105,19 @@ button {
 	font-size: 120%;
 }
 
-button:hover {
+a.button:focus,
+button:focus {
 	background: #cb9416;
 	border-color: #a87a16;
 }
 
-button:active {
-	background: #ffb700;
-	border-color: #cf9400;
-}
-
 
 /** Header **/
+header {
+	width: 100%;
+	position: relative;
+}
+
 .app-title {
 	background: #5856d6;
 	color: #fff;

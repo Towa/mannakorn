@@ -61,6 +61,6 @@ var app = {
         //var os = device.platform + parseInt(device.version);
         //document.body.setAttribute('class', os);
 
-        console.log('Received Event id: ' + id);
+        //console.log('Received Event id: ' + id);
     }
 };

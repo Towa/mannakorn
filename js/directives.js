@@ -34,13 +34,18 @@ angular.module('mannakorn')
 			});
 			element.bind('touchend', function(e) {
 				if (tapping) {
-					tappingTime = new Date().getTime();
+                    tapping = false;
+                    tappingTime = new Date().getTime();
 					scope.$apply(attrs['ngTap'], element);
+                    e.preventDefault();
 				}
 			});
 			element.bind('click', function(e) {
-				if(!tappingTime || (tappingTime && new Date().getTime() - tappingTime < 60))
+                var time = new Date().getTime();
+                if(!tappingTime || (tappingTime && time - tappingTime > 60)) {
 					scope.$apply(attrs['ngTap'], element);
+                    e.preventDefault();
+                }
 			})
 		};
 	});

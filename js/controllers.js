@@ -1,7 +1,6 @@
 'use strict';
 function setMannakornScope($scope, bible, resource, book, chapter, verse, numberOfVerses) {
 
-	console.timeStamp('start setMannakornScope');
 	var verses = [];
 	
 	for (var i = 0; i < numberOfVerses; i++) {
@@ -10,17 +9,20 @@ function setMannakornScope($scope, bible, resource, book, chapter, verse, number
 			"text": bible[book][chapter-1][verse+i-1]
 		});
 	}
+	var verseDescription = verses[0].number + (verses.length == 1 ? "" : " - " + verses[verses.length-1].number);
 	
 	$scope.mannakorn = {
 		book: book,
 		chapter: chapter,
-		verses: verses
+		verses: verses,
+        description: resource[book] + " " + chapter + ", " + verseDescription
 	};
-	
-	var verseDescription = verses[0].number + (verses.length == 1 ? "" : " - " + verses[verses.length-1].number);
-	$scope.mannakorn.description = resource[book] + " " + chapter + ", " + verseDescription;
-	
-	console.timeStamp('end setMannakornScope');
+    
+    $scope.changeLanguageLink = '#/' + ($scope.language == "en" ? "de" : "en") + '/mannakorn?'
+    + 'book=' + book
+    + '&chapter=' + chapter
+    + '&verse=' + verse
+    + '&length=' + numberOfVerses;
 }
 
 function MannakornVerseCtrl($scope, $routeParams, $location, bible, mannakornPicker, resource, $timeout) {
@@ -40,16 +42,9 @@ function MannakornVerseCtrl($scope, $routeParams, $location, bible, mannakornPic
 	}
 	
 	$scope.resource = resource;
-	
-	setMannakornScope($scope, bible, resource, book, chapter, verse, numberOfVerses);
-	
 	$scope.language = language;
 	
-	$scope.changeLanguageLink = '#/' + (language == "en" ? "de" : "en") + '/mannakorn?'
-		+ 'book=' + book
-		+ '&chapter=' + chapter
-		+ '&verse=' + verse
-		+ '&length=' + numberOfVerses;
+	setMannakornScope($scope, bible, resource, book, chapter, verse, numberOfVerses);
 	
 	$scope.changeLanguage = function() {
 		$location.path('/' + $scope.language + '/mannakorn?'
@@ -65,16 +60,15 @@ function MannakornVerseCtrl($scope, $routeParams, $location, bible, mannakornPic
 			.search('length', numberOfVerses);
 	}
 	
-	console.timeStamp('end MannakornVerseCtrl');
-	
 	$scope.randomVerse = function() {
-		console.timeStamp('button pressed');
 		var mannakorn = mannakornPicker.random();
 		setMannakornScope($scope, bible, resource, 
 				mannakorn.book, mannakorn.chapter, mannakorn.verse, mannakorn.length);
-		$location.search("book", mannakorn.book)
+        
+        // the following causes the controller to run again (at least on ios)
+		/*$location.search("book", mannakorn.book)
 			.search("chapter", mannakorn.chapter)
 			.search("verse", mannakorn.verse)
-			.search("length", mannakorn.length);
+			.search("length", mannakorn.length);*/
 	}
 }
