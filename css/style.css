@@ -78,9 +78,10 @@ body {
 
 .page footer {
 	position: fixed;
-	bottom: 8px;
+	bottom: 0px;
 	background: #5856d6;
 	width: 100%;
+	border-bottom: 8px solid #f7f7f7;
 }
 
 h1, h2, h3, h4, h5 {
@@ -102,6 +103,16 @@ button {
 	padding: 8px 16px;
 	font-weight: bold;
 	font-size: 120%;
+}
+
+button:hover {
+	background: #cb9416;
+	border-color: #a87a16;
+}
+
+button:active {
+	background: #ffb700;
+	border-color: #cf9400;
 }
 
 
@@ -209,4 +220,5 @@ footer a {
 	text-decoration: none;
 	font-size: 120%;
 	line-height: 66px;
+	padding: 0 16px;
 }
