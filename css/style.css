@@ -59,6 +59,7 @@ body {
 
 .page .inner-body {
 	position: absolute;
+	z-index: 20;
 	bottom: 0px;
 	width: 100%;
 	max-height: 100%;
@@ -78,6 +79,7 @@ body {
 	background: #5856d6;
 	width: 100%;
 	border-bottom: 8px solid #f7f7f7;
+	z-index: 30;
 }
 
 h1, h2, h3, h4, h5 {
@@ -122,6 +124,7 @@ button:active {
 	font-weight: normal;
 	padding: 4px 24px;
 	border-bottom: 3px solid #4846b0;
+	z-index: 10;
 }
 
 

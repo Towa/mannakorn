@@ -1,17 +1,14 @@
 <div class="page">
-	<header>
-		<h2 class="app-title">Mannakorn</h2>
-	</header>
-	
+    
 	<div class="body">
 	<div class="inner-body">
 		<div class="mannakorn-holder">
-			<div id="mannakorn"><!-- &bdquo; -->
-				<img src="img/quotation-mark.png" class="quotation-mark before" /><!-- This has to be replaced with a graphic since it's not websafe -->
+			<div id="mannakorn">
+				<img src="img/quotation-mark.png" class="quotation-mark before" />
 				<div class="content" ng-repeat="verse in mannakorn.verses">
         			<span class="item"><span class="number">{{verse.number}}</span> {{verse.text}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
     			</div>
-				<img src="img/quotation-mark.png" class="quotation-mark after" /><!-- &rdquo; -->
+				<img src="img/quotation-mark.png" class="quotation-mark after" />
         		<h4 class="verse">{{mannakorn.description}}</h4>
 			</div>
 		</div>
